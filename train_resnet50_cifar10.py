@@ -1,21 +1,21 @@
 #developed by kusiwu: 12.08.2018
 #git:   https://github.com/kusiwu/
 
-import numpy as np
+#import numpy as np
 import os,sys
 import time
 from resnet50_32x32 import ResNet50
-from keras.preprocessing import image
+#from keras.preprocessing import image
 from keras.layers import GlobalAveragePooling2D, Dense, Dropout,Activation,Flatten
 from keras import optimizers
 from keras.layers import Input
 from keras.engine import Model
 from keras.models import load_model
 from keras.utils import np_utils
-from sklearn.utils import shuffle
-from sklearn.model_selection import train_test_split
+#from sklearn.utils import shuffle
+#from sklearn.model_selection import train_test_split
 from keras import callbacks
-from keras.utils.vis_utils import plot_model #for graphical demonstration of Network model #requires graphwiz. Not active for now...
+#from keras.utils.vis_utils import plot_model #for graphical demonstration of Network model #requires graphwiz. Not active for now...
 from datetime import datetime
 from keras.datasets import cifar10
 
@@ -92,8 +92,8 @@ custom_resnet_model.summary()
 
 ###### please install pydot with pip install pydot and download graphwiz from website :https://graphviz.gitlab.io/_pages/Download/Download_windows.html
 ####add graphwiz path to visualize model graph. No need for now.
-os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
-plot_model(custom_resnet_model, to_file='outputs/model1_plot.png', show_shapes=True, show_layer_names=True)
+#os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
+#plot_model(custom_resnet_model, to_file='outputs/model1_plot.png', show_shapes=True, show_layer_names=True)
 
 
 # callback for tensorboard integration
