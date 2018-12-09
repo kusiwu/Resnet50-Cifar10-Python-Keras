@@ -1,0 +1,5 @@
+*__pycache__*
+trained_models/*.h5
+logs/*
+outputs/*
+predict_32x32Image_resnet50*
