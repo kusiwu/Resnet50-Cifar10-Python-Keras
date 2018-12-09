@@ -24,7 +24,7 @@ nb_classes = 10
 
 print("shuffling test dataset randomly!")
 # X_train, y_train = shuffle(X_train, y_train, random_state=0)
-X_test, y_test = shuffle(X_test, y_test, random_state=0)
+X_test, y_test = shuffle(X_test, y_test, random_state=1)
 
 
 xTestPictures=X_test
@@ -37,15 +37,6 @@ yTestExpectedLabels=y_test[0:1000];
 modelpath='./trained_models/resnet50model1.h5'
 model = load_model(modelpath)
 print(modelpath + ' is loaded!')
-
-#model.load_weights('./trained_models/weights-improvement_len10-02-0.94_2018-11-27_21.06.12.h5')
-#model.compile(loss='binary_crossentropy',
-#              optimizer=optimizers.SGD(lr=1e-5, momentum=0.8),
-#              metrics=['accuracy'])
-
-#model.compile(loss='categorical_crossentropy',
-#              optimizer='adadelta',
-#              metrics=['accuracy'])
 
 # model.summary()
 # print(device_lib.list_local_devices())

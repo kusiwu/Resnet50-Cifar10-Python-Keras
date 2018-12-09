@@ -45,6 +45,8 @@ if WANNAFASTTRAINING == 1 :
     X_test= X_test[000:1000,:,:,:]
     y_test= y_test[000:1000]
 
+#X_train=X_train * 1. / 255
+#X_test=X_test * 1. / 255
 
 num_of_samples = X_train.shape[0]
 ###########################################################################################################################
@@ -52,7 +54,7 @@ num_of_samples = X_train.shape[0]
 #Training the classifier alone
 image_input = Input(shape=(img_width, img_height, 3))
 
-previouslytrainedModelpath ='./trained_models/resneta50model1.h5'
+previouslytrainedModelpath ='./trained_models/resnet50model1.h5'
 if os.path.isfile(previouslytrainedModelpath):
     print('Loading previously trained model1...')
     model = load_model(previouslytrainedModelpath)
