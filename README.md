@@ -106,3 +106,7 @@ Training time: 3243.37100315094
 [INFO] loss=0.1107, accuracy: 96.1800%
 model1 resaved.
 ```
+<details>
+  <summary>Layers of the Model. Warning, big image inside!</summary>
+ <img src="outputs/model1_plot.png">
+</details>
