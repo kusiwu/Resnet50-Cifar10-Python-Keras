@@ -85,7 +85,7 @@ for layer in custom_resnet_model.layers[:]:
 
 # compile the model with a SGD/momentum optimizer
 # and a very slow learning rate.
-custom_resnet_model.compile(loss='binary_crossentropy',
+custom_resnet_model.compile(loss='categorical_crossentropy',
               optimizer=optimizers.SGD(lr=learningrate, momentum=momentum),
               metrics=['accuracy'])
 
